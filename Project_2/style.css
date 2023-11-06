@@ -13,7 +13,7 @@
   --padding-inline: 20px;
   --footer-background: #25282e;
 }
-
+/* Custom Scroll Bar */
 ::-webkit-scrollbar {
   width: 20px;
 }
@@ -43,7 +43,7 @@ body {
   font-family: "Poppins", sans-serif;
   /* min-height: 100vh;
     width: 100vw; */
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 p {
@@ -65,6 +65,9 @@ ul li {
 
 /* aba balla code suru hai */
 /* first nav-panel */
+
+
+
 
 .nav-first-panel {
   display: flex;
@@ -116,6 +119,7 @@ ul li {
 /*third nav panel or third section*/
 
 .third-nav-panel nav {
+  position: sticky;
   height: 50px;
   margin-top: 10px;
   background-color: var(--second-color);
@@ -190,7 +194,8 @@ ul li {
   position: relative;
   font-size: 150px;
   font-weight: 600;
-  color: rgb(222, 215, 215);
+  /* color: rgb(222, 215, 215); */
+  color: rgba(222, 215, 215, 0.3);
 }
 
 /*Events Annnouncements 3 board*/
@@ -458,24 +463,21 @@ ul li {
 }
 
 /* placement*/
-.placement{
+.placement {
   background-color: white;
   height: 30vh;
 }
-.placement .inner-placement h2{
+.placement .inner-placement h2 {
   color: var(--heading-color);
   font-size: 30px;
   font-weight: 500;
   border-bottom: 2px solid var(--fourth-color);
   margin: 10px 40px 10px 10px;
-} 
-
-.placement .inner-placement marquee{
-  margin: 25px 0px 25px 10px;
 }
 
-
-
+.placement .inner-placement marquee {
+  margin: 25px 0px 25px 10px;
+}
 
 /* Footer */
 
@@ -548,44 +550,90 @@ ul li {
   color: white;
 }
 
-
 /* footer copyright section*/
-.footer-last-copyright-privacy-section{
+.footer-last-copyright-privacy-section {
   height: 100px;
   width: 100%;
   background-color: var(--accent-color-dark);
   font-size: 13px;
   color: #dddddd;
 }
-.footer-privacy-section{
+.footer-privacy-section {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.footer-privacy-section ul li{
+.footer-privacy-section ul li {
   display: inline-block;
   margin-right: 10px;
   margin-top: 30px;
 }
-.footer-privacy-section a:hover{
+.footer-privacy-section a:hover {
   text-decoration: underline;
 }
 
 /* footer copyright */
-.footer-copyright-last-panel{
+.footer-copyright-last-panel {
   text-align: center;
+}
+
+
+/* Message box last */
+
+
+.message i{
+  font-size: 3vw;
+  position: fixed;
+  bottom: 30px;
+  right: 15px;
+  color: var(--second-color);
 }
 
 
 
 
-@media (max-width : 1200px) {
-  .manager{
+/* responsive */
+@media (max-width: 1200px) {
+  .manager {
     height: 800px;
   }
-  .manager .last-img{
+  .manager .last-img {
     display: none;
   }
+  .hero-section-img p{
+    font-size: 100px;
+  }
+}
+
+
+/* @media (max-width : 800px){
+  section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    flex-wrap: wrap;
+  }
+} */
+
+
+/* Warning */
+
+@media (min-width:600px) {
+  .warning{
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .warning{
+    font-size: 1.5em;
+    color: black;
+    display: inline-block;
+    width: 100%;
+  }
+  main,section,header,footer{
+    display: none;
   }
 
-
+}
